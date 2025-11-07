@@ -1,6 +1,4 @@
-Thu Nov  6 11:19:38 UTC 2025 | Pulsar: PSR B0531+21 | Coord: 05h34m31.97s +22°00′52.1″ | Period: 33.0ms | IP:  | SHA: 3b3de309685c12a4d73b3ade0e295901c011f77a9380aae90df8d57cc92f1c20
-Thu Nov  6 11:27:28 UTC 2025 | Moduli generati | Validator SHA: 06805e95eea6849be2a4b9eb357a9010728f4e3088dd5946b5e12bf678bf3e22 | Bridge SHA: 2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf
-Thu Nov  6 11:27:32 UTC 2025 | Moduli forgiati | Validator SHA: 89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169 | Bridge SHA: 2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf
-Thu Nov  6 11:32:22 UTC 2025 | Moduli corretti | Validator SHA: 89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169 | Bridge SHA: 2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf | IP: 
-Thu Nov  6 11:44:16 UTC 2025 | Moduli corretti | Validator SHA: 89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169 | Bridge SHA: 2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf | IP: non rilevato
-Thu Nov  6 11:49:12 UTC 2025 | Moduli corretti | Validator SHA: 89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169 | Bridge SHA: 2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf | IP: non rilevato
+from datetime import datetime
+def log_event(event):
+    with open("eco_events.log", "a") as f:
+        f.write(f"{datetime.now().isoformat()} — {event}\n")

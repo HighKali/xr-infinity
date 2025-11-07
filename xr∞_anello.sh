@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "🔁 Rigenerazione orbitale XR∞ in corso..."
-python3 bionc_kstars_bridge.py
-python3 pulsar_dashboard_web.py
+python3 eco_log.py
+python3 xr∞_pulse.py
+bash pulsar_sync.sh
