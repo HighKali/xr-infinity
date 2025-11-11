@@ -3,14 +3,17 @@
 <meta charset="UTF-8" />
 <title>XR∞ Dashboard</title>
 <body style="font-family:sans-serif;background:#0b0f1a;color:#e6e6e6;margin:2rem;">
-<h1>XR∞ — Costellazione industriale, scientifica, mitica</h1>
+<h1>XR∞ — Dashboard</h1>
 <h3>BOINC</h3><pre id="boinc">caricamento…</pre>
 <h3>SETI</h3><pre id="seti">caricamento…</pre>
 <h3>Eco events</h3><pre id="eco">caricamento…</pre>
 <h3>XR∞Coin miner</h3><pre id="miner">caricamento…</pre>
 <h3>Report integrità</h3><pre id="report">caricamento…</pre>
 <script>
-async function load(p,e){try{const r=await fetch('../data/'+p+'?t='+Date.now());document.getElementById(e).textContent=await r.text();}catch(x){document.getElementById(e).textContent='Errore: '+x;}}
+async function load(p,e){try{
+  const r=await fetch('../data/'+p+'?t='+Date.now());
+  document.getElementById(e).textContent=await r.text();
+}catch(x){document.getElementById(e).textContent='Errore: '+x;}}
 function refresh(){
   load('boinc_state.json','boinc');
   load('seti_results.json','seti');
@@ -18,7 +21,7 @@ function refresh(){
   load('xr_miner_state.json','miner');
   load('report.json','report');
 }
-refresh();setInterval(refresh,3000);
+refresh(); setInterval(refresh, 3000);
 </script>
 </body>
 </html>
