@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="it">
-<meta charset="UTF-8" />
-<title>XR∞ Costellazione — Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<body style="font-family:sans-serif;background:#0b0f1a;color:#e6e6e6;margin:2rem;">
-<h1>XR∞ — Costellazione industriale, scientifica, mitica</h1>
-<h3>BOINC</h3><pre id="boinc">caricamento…</pre>
-<h3>SETI</h3><pre id="seti">caricamento…</pre>
-<h3>Eco events</h3><pre id="eco">caricamento…</pre>
-<h3>XR∞Coin miner (ultimo blocco)</h3><pre id="miner">caricamento…</pre>
-<script>
-async function load(p,e){try{const r=await fetch(p+'?t='+Date.now());document.getElementById(e).textContent=await r.text();}catch(x){document.getElementById(e).textContent='Errore: '+x;}}
-function refresh(){
-  load('../data/boinc_state.json','boinc');
-  load('../data/seti_results.json','seti');
-  load('../data/eco_events.log','eco');
-  load('../data/xr_miner_state.json','miner');
-}
-refresh();setInterval(refresh,3000);
-</script>
-</body>
-</html>
+<!doctype html>
+<html><head>
+<meta charset="utf-8"><title>XR∞ Pages</title>
+<style>body{background:#000;color:#0ff;font-family:monospace}iframe{border:2px solid #0ff;border-radius:14px}</style>
+</head><body>
+<h1>XR∞ Pages — BOINC + OAuth</h1>
+<p>👽 Accesso protetto via Google. Avvia la dashboard localmente:</p>
+<pre>
+pip install -r oauth/requirements.txt
+python oauth/app.py
+</pre>
+<iframe src="http://localhost:5000" width="100%" height="800"></iframe>
+</body></html>
