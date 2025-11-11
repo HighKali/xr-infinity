@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XR∞ Portale Orbitale</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #1f2833;
+      padding: 1em;
+      text-align: center;
+    }
+    section {
+      padding: 2em;
+    }
+    .orbital-section {
+      border: 1px solid #45a29e;
+      margin: 1em 0;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #45a29e;
+      color: #0b0c10;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #66fcf1;
+    }
+    .caption {
+      font-size: 0.9em;
+      color: #66fcf1;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 400px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>XR∞ Portale Orbitale</h1>
+  <p>Partecipazione decentralizzata, miner etico, e battito computazionale condiviso</p>
+</header>
+
+<section id="xr-miner" class="orbital-section">
+  <h2>⛏️ Mining Orbitale (XMR)</h2>
+  <button onclick="startMining()">Avvia Mining Orbitale</button>
+  <iframe id="miner-frame" src=""></iframe>
+  <p class="caption">
+    Questo miner usa WebAssembly per contribuire al hashrate decentralizzato.  
+    Ogni visitatore può partecipare al battito computazionale della costellazione XR∞.  
+    100% payout verso il wallet orbitale:<br>
+    <code>491Hnbre8XP1Lyji5P53JyK5QVSrhj4ZPfABotRjPjRL4yeVVa8p7pMRRe9zzMDYh8PZhcmeoMBREUkLwM6H96CKBdL47XX</code>
+  </p>
+</section>
+
+<section id="xr-badge" class="orbital-section">
+  <h2>🔖 Nodo Orbitale</h2>
+  <img src="eco_miner_badge.svg" alt="Badge miner orbitale" width="200">
+  <p class="caption">Questo badge rappresenta il nodo attivo nel tessuto computazionale XR∞</p>
+</section>
+
+<footer>
+  <p>© XR∞ Industrial Constellation — Tutti i battiti sono eterni</p>
+</footer>
+
+<script>
+function startMining() {
+  const iframe = document.getElementById("miner-frame");
+  iframe.src = "http://localhost:8180";
+  iframe.style.display = "block";
+}
+</script>
+
+</body>
+</html>

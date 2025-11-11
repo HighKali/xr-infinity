@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><meta charset='UTF-8'><title>EcoBlock Lightning Dashboard</title>
+<link rel='stylesheet' href='../static/style.css'>
+<style>
+body { background:#000; color:#0ff; font-family:monospace; text-align:center }
+.menu { display:flex; justify-content:center; gap:20px; margin:20px }
+.menu a { color:#0ff; text-decoration:none; border:1px solid #0ff; padding:10px; border-radius:5px }
+.card { border:1px solid #0ff; border-radius:10px; padding:10px; margin:10px auto; width:80%; background:#111 }
+img { margin-top:10px }
+</style></head><body>
+<h1>⚡ EcoBlock Lightning Bridge</h1>
+<img src='assets/eco_light_badge.svg' width='300'>
+<div class='menu'>
+<a href="eco_light_contributors.html">🪪 Collaboratori</a>
+<a href='eco_light_panel.html'>📄 Transazioni</a>
+<a href='onboarding.html'>🧭 Onboarding</a>
+<a href='assets/eco_light_tunnel_qr.png'>🌍 QR Pubblico</a>
+<a href='../scripts/eco_light_log.json'>📜 Log</a>
+<a href='../eco_light_backup_*.zip'>🗂️ Backup</a>
+</div>
+<div class='card'>
+<h2>🌍 Accesso Globale</h2>
+<p><a href='{url}' target='_blank'>{url}</a></p>
+<img src='assets/eco_light_tunnel_qr.png' width='200'>
+</div>
+<div class='card'>
+<h2>📄 Transazioni Ricevute</h2>
+<div class='card'><h3>BTC → 1000 sats</h3><p>Memo: EcoBlock BTC test</p><p>Status: ✅ Simulated</p><p>Hash: SIM-BTC-1761209712</p><p>⏱️ </p><img src='assets/eco_light_qr_btc.png' width='200'></div>
+<div class='card'><h3>DOGE → 500 sats</h3><p>Memo: EcoBlock DOGE test</p><p>Status: ✅ Simulated</p><p>Hash: SIM-DOGE-1761209712</p><p>⏱️ </p><img src='assets/eco_light_qr_doge.png' width='200'></div>
+<div class='card'><h2>🪪 Collaboratori</h2><p>2025-10-23 11:26:20 | RobertoFounder</p><img src='assets/eco_guest_RobertoFounder.png' width='150'></div></body></html>

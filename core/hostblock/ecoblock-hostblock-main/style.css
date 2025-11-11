@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b0f14;
+  color: #e9f0f8;
+}
+header {
+  background: linear-gradient(to right, #5ee1a9, #3cc2ff);
+  padding: 1em;
+  text-align: center;
+}
+.logo {
+  width: 48px;
+  vertical-align: middle;
+}
+.sidebar {
+  background: #121923;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 180px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar a {
+  color: #5ee1a9;
+  text-decoration: none;
+  display: block;
+  margin: 1em 0;
+}
+main {
+  margin-left: 200px;
+  padding: 2em;
+}
+.card {
+  background: #1e2a38;
+  border: 1px solid #3cc2ff;
+  border-radius: 12px;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+button {
+  background: #5ee1a9;
+  border: none;
+  padding: 0.5em 1em;
+  color: #071017;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.status .online {
+  color: #5ee1a9;
+}
+.map {
+  width: 100%;
+  border-radius: 8px;
+}

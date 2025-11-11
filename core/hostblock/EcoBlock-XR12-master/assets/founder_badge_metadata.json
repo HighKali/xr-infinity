@@ -1,0 +1,23 @@
+{
+  "name": "EcoBlock Founder Badge",
+  "description": "Badge SVG firmato per contributo fondativo su ZSONA chain",
+  "image": "Qm96aa2df920081ca0fdad34644795aab70bd0baa878f1",
+  "attributes": [
+    {
+      "trait_type": "ZIP",
+      "value": "EcoZSONA_20251023_193455.zip"
+    },
+    {
+      "trait_type": "SHA256",
+      "value": "96aa2df920081ca0fdad34644795aab70bd0baa878f14e7a776e24b891c0f48f"
+    },
+    {
+      "trait_type": "Timestamp",
+      "value": "20251023_193455"
+    },
+    {
+      "trait_type": "Signature",
+      "value": "Zapdos"
+    }
+  ]
+}

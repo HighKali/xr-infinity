@@ -1,0 +1,16 @@
+<svg width="420" height="180" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 20px sans-serif; fill: #00ffcc; }
+    .meta { font: 14px monospace; fill: #ffffff; }
+    .bg { fill: #111111; }
+    .border { stroke: #00ffcc; stroke-width: 2; fill: none; }
+  </style>
+  <rect class="bg" width="100%" height="100%" rx="12"/>
+  <rect class="border" x="4" y="4" width="412" height="172" rx="12"/>
+  <text x="20" y="40" class="title">🪪 EcoBlock Founder Badge</text>
+  <text x="20" y="70" class="meta">ZIP: EcoZSONA_20251023_185050.zip</text>
+  <text x="20" y="90" class="meta">SHA256: 96aa2df920081ca0fdad34644795aab7...</text>
+  <text x="20" y="110" class="meta">IPFS: Qm96aa2df920081ca0fdad34644795aab70bd0baa878f1</text>
+  <text x="20" y="130" class="meta">Timestamp: 20251023_185050</text>
+  <text x="20" y="150" class="meta">Signature: Zapdos</text>
+</svg>

@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+{"seq": 56, "status": "ok", "power": 42.0, "band": "L", "ts": 1762891958}
+=======
+{"seq": 1, "status": "ok", "power": 42.0, "band": "L", "ts": 1762887966}
+>>>>>>> e3bd05b7b90a57cfdde7fddb2c09d822015e8e2c

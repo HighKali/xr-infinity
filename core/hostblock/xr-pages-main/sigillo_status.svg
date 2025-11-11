@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60">
+  <rect width="220" height="60" fill="#0b0f2b"/>
+  <text x="20" y="35" font-size="20" fill="gold">🔮 Nodo orbitale XR∞Coin</text>
+  <circle cx="200" cy="30" r="10" fill="lime"/>
+</svg>

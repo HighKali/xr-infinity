@@ -1,0 +1,4 @@
+Token: NETkali $DSN
+Address: 0xfc90516a1f736FaC557e09D8853dB80dA192c296
+DEX: ZSONA DEX
+Pool: ZSONA Pool

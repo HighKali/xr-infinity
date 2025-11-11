@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>XR∞Miner Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { background: radial-gradient(circle at top, #001, #000); color: #0ff; font-family: monospace; text-align: center; padding: 20px; }
+    h1, h2 { color: #00f6ff; text-shadow: 0 0 5px #0ff; }
+    button, select { background: #111; color: #0f0; border: 1px solid #0ff; padding: 10px 20px; margin: 10px; font-size: 1em; cursor: pointer; box-shadow: 0 0 5px #0ff; }
+    button:hover, select:hover { background: #222; }
+    a { color: #0ff; text-decoration: none; }
+    .section { margin-top: 30px; border-top: 1px dashed #0ff; padding-top: 20px; }
+    footer { margin-top: 40px; font-size: 0.9em; color: #0f0; }
+    .repo-buttons button { display: block; margin: 10px auto; width: 80%; }
+  </style>
+</head>
+<body>
+  <h1>🚀 XR∞Miner Dashboard</h1>
+  <p>Miner orbitale per XMR, ETH, QR — payout 100% verso wallet personale.</p>
+
+  <div class="section">
+    <h2>💱 Seleziona Moneta</h2>
+    <select id="coin">
+      <option value="XMR">XMR</option>
+      <option value="ETH">ETH</option>
+      <option value="QR">QR</option>
+    </select>
+    <button onclick="avviaMiner()">🚀 Avvia WebMiner</button>
+  </div>
+
+  <div class="section">
+    <h2>📡 Monitor API Miner</h2>
+    <p id="api">Caricamento dati real-time...</p>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Stato Nodo</h2>
+    <p id="nodo">Nodo XR∞ operativo</p>
+    <p>🕒 Uptime: <span id="uptime">0s</span></p>
+  </div>
+
+  <div class="section">
+    <h2>⚒️ Hashrate Cryptonote</h2>
+    <p>⛏️ <strong>1312.08 H/s</strong></p>
+  </div>
+
+  <div class="section">
+    <h2>🧬 Token  su Polygon</h2>
+    <p>Indirizzo: <code>0xfc90516a1f736FaC557e09D8853dB80dA192c296</code></p>
+    <p><a href="https://birdeye.so/polygon/token/0xfc90516a1f736FaC557e09D8853dB80dA192c296" target="_blank">💹 Prezzo live su Birdeye</a></p>
+    <iframe src="https://birdeye.so/polygon/token/0xfc90516a1f736FaC557e09D8853dB80dA192c296/embed" width="100%" height="300" style="border:none;"></iframe>
+  </div>
+
+  <div class="section">
+    <h2>🌌 Repository Orbitanti</h2>
+    <div class="repo-buttons">
+      <button onclick="window.open('https://github.com/HighKali/XR-Miner.git', '_blank')">🛠️ XR-Miner</button>
+      <button onclick="window.open('https://github.com/HighKali/ecoblock-hostblock.git', '_blank')">🌱 Ecoblock Hostblock</button>
+      <button onclick="window.open('https://github.com/HighKali/rackchain-os-xr', '_blank')">🧬 Rackchain OS XR</button>
+    </div>
+  </div>
+
+  <footer>
+    <p><em>Ultimo aggiornamento: <span id="update"></span></em></p>
+    <p>🌙 XR∞ Industrial Constellation — ogni nodo è un battito, ogni fork una stella</p>
+  </footer>
+
+  <script>
+    document.getElementById("update").innerText = new Date().toLocaleString();
+    setInterval(() => { document.getElementById("api").innerText = "Miner attivo su localhost:7777"; }, 3000);
+    let seconds = 0;
+    setInterval(() => { seconds++; document.getElementById("uptime").innerText = seconds + "s"; }, 1000);
+    function avviaMiner() {
+      const coin = document.getElementById("coin").value;
+      alert("Avvio WebMiner per " + coin);
+      window.open("http://localhost:7777?coin=" + coin, "_blank");
+    }
+  </script>
+</body>
+</html>

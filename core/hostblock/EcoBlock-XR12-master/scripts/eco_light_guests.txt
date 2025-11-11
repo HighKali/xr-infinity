@@ -1,0 +1,6 @@
+2025-10-23 11:26:20 | RobertoFounder
+2025-10-23 12:01:18 | RobertoFounder
+{"name": "Zapdos", "role": "Founder", "timestamp": "20251023_180549"}
+{"name": "Zapdos", "role": "Founder", "timestamp": "20251023_180815"}
+{"name": "Zapdos", "role": "Founder", "timestamp": "20251023_193413"}
+{"name": "Zapdos", "role": "Founder", "timestamp": "20251023_195427"}

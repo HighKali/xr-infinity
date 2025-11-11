@@ -1,0 +1,6 @@
+Avvio: Fri Oct 24 12:05:04 CEST 2025
+SHA256: 54b13954ba7c1c70b6217cd82cfda1e33e9a17cbb2ffcf4ba6fa7a0c2a495bbd
+ * Serving Flask app 'eco_wallet_zsona_origin'
+ * Debug mode: off
+Address already in use
+Port 8080 is in use by another program. Either identify and stop that program, or start the server with a different port.

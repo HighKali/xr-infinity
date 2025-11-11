@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>EcoBlock ZSONA Sync Report</title>
+<style>
+body { background-color: black; color: #00FF00; font-family: monospace; }
+h1 { color: cyan; text-align: center; text-shadow: 0 0 5px #0ff; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { border: 1px solid cyan; padding: 8px; text-align: center; }
+canvas { margin-top: 40px; }
+</style>
+</head>
+<body>
+<h1>EcoBlock ZSONA Sync Report</h1>
+<table>
+<tr><th>Timestamp</th><th>Chain ID</th><th>Token</th><th>DEX Volume</th><th>Pool APY</th></tr>
+<tr><td>2025-10-21T15:38:40.808286</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T15:45:20.314786</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T16:45:19.503676</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T16:45:19.504094</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T16:45:19.514776</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T16:45:19.518631</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T17:06:57.854545</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T17:06:57.871256</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T17:06:57.886146</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+<tr><td>2025-10-21T17:06:57.898784</td><td>ZSONA-ROBERTO-0001</td><td>0xfc90516a1f736FaC557e09D8853dB80dA192c296</td><td>125000</td><td>12.5%</td></tr>
+</table>
+<canvas id='syncChart' width='800' height='400'></canvas>
+
+<script>
+const ctx = document.getElementById('syncChart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['2025-10-21T15:38:40.808286', '2025-10-21T15:45:20.314786', '2025-10-21T16:45:19.503676', '2025-10-21T16:45:19.504094', '2025-10-21T16:45:19.514776', '2025-10-21T16:45:19.518631', '2025-10-21T17:06:57.854545', '2025-10-21T17:06:57.871256', '2025-10-21T17:06:57.886146', '2025-10-21T17:06:57.898784'],
+        datasets: [{
+            label: 'DEX Volume',
+            data: [125000, 125000, 125000, 125000, 125000, 125000, 125000, 125000, 125000, 125000],
+            borderColor: 'cyan',
+            fill: false
+        }, {
+            label: 'Pool APY',
+            data: [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5],
+            borderColor: 'lime',
+            fill: false
+        }]
+    },
+    options: {
+        scales: {
+            x: { ticks: { color: '#00FF00' } },
+            y: { ticks: { color: '#00FF00' } }
+        },
+        plugins: {
+            legend: { labels: { color: '#00FF00' } }
+        }
+    }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
