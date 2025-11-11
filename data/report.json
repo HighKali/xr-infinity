@@ -1,0 +1,302 @@
+{
+  "files": [
+    {
+      "path": "./xr_unified.sh",
+      "sha256": "8746b6e4fc012b637a623ec06ea860f3ef1ae418c7168a38d814b2ca4bac0572"
+    },
+    {
+      "path": "./index.html",
+      "sha256": "0475ec35ba9ff4c3164d50a12df97936366e29753d6a517e16edc8e3ec810450"
+    },
+    {
+      "path": "./xr\u221e_einstein.svg",
+      "sha256": "74b3e97c85021cf1bff1e7675d5b477dad585ffd783ff5667d22ff3df525bc4b"
+    },
+    {
+      "path": "./LICENSE",
+      "sha256": "f6b65af4ff8a8734025b931ee20804bbbc17b660447892ce8f09a3969a393c3c"
+    },
+    {
+      "path": "./README.md",
+      "sha256": "79c217d9f31d8565965fb4540492b7ce217f473db5bab426e67e1d7d665fef9e"
+    },
+    {
+      "path": "./bionc_kstars_bridge.py",
+      "sha256": "6118d1b78e2e89bb0662ebb2e6019a66594c1148a2c990134112edffe97be716"
+    },
+    {
+      "path": "./dsn_monitor.py",
+      "sha256": "062581eabb3ebda02e548520ec4d035581fa457cd380ead951181f2a968310b7"
+    },
+    {
+      "path": "./eco_events.log",
+      "sha256": "7ac055a4820161af4b6b399170cd64f771b8c7f14a21e78f5a79e87989ba0ad4"
+    },
+    {
+      "path": "./eco_log.py",
+      "sha256": "67d575d3de14d398bada99e639a8be6c7b71c3aff2a42393001af3d3833ebd7e"
+    },
+    {
+      "path": "./generate_badge.sh",
+      "sha256": "c4090cdc4a578a92fdba7b28073db3d9c393d0c8c152ed9100d49ae24fb866a8"
+    },
+    {
+      "path": "./launch_dashboard.sh",
+      "sha256": "8fc6518ceb54a7135eec3eff680f4b8af17d25c8c4dc57e425ab037d657a15b3"
+    },
+    {
+      "path": "./notify_orbit.py",
+      "sha256": "e6230dd44fe241ca34ae839bebd768ba39b72a6e51b8c1716b1b8aaf86e66c29"
+    },
+    {
+      "path": "./pulsar_dashboard_web.py",
+      "sha256": "a31d298b9032ba57fc7107415fe318dc61850c342a185b5eec013c3a930699e0"
+    },
+    {
+      "path": "./pulsar_sync.sh",
+      "sha256": "0bfe33eb32eeb4572d86f6c04a50e23f27365a2a3ef3b9ad0b90369f67132f10"
+    },
+    {
+      "path": "./xr_tools.sh",
+      "sha256": "26dd921c56ab0b98c74d4396ce46225e2b790472ff6612dfbeadcda42a872cd5"
+    },
+    {
+      "path": "./xr_report.py",
+      "sha256": "88d45ce0d807b09362cf072190bf90af74b7896a13fff27b0332da0df082f13f"
+    },
+    {
+      "path": "./xr\u221e_anello.sh",
+      "sha256": "45816a3570f2a1d88af99b2cef63dba9e45c52bf40c11c7dd57f6b827904d9b6"
+    },
+    {
+      "path": "./pulsar_badge.svg",
+      "sha256": "79fd5f4c57a61dd3d699325682e064ef5ac8c97027fbfdd493c76eebcb66f1ac"
+    },
+    {
+      "path": "./xr\u221e_anello_20251106_1219.tar.gz",
+      "sha256": "3b3de309685c12a4d73b3ade0e295901c011f77a9380aae90df8d57cc92f1c20"
+    },
+    {
+      "path": "./xr\u221e_genesis.sh",
+      "sha256": "ac93f92afc6b79d35914bd27d4ecb95f4f159a263f4b3dcba8b8fc75407c79e7"
+    },
+    {
+      "path": "./xr\u221e_manifesto.md",
+      "sha256": "b9d8df7186dc4549970b9db04f7077f9a544b41b497e7c4f41858a07ada1b3f5"
+    },
+    {
+      "path": "./xr\u221e_pages.sh",
+      "sha256": "a7160332fdee78da2c5b2c9e75c6b32f45ad5b12de859c57d34a1af28e9c1d01"
+    },
+    {
+      "path": "./xr\u221e_publish.sh",
+      "sha256": "044dfa79135eb02aafaf099b14af3ab7c0108062a935ef6f4c888f1064a2f480"
+    },
+    {
+      "path": "./xr\u221e_pulse.py",
+      "sha256": "998e924e5a562bc1ba179ef4dae6c8e7bd13f295bfbb0d1305075b4b63d2aaa1"
+    },
+    {
+      "path": "./xr\u221e_sigillo.svg",
+      "sha256": "a6ceca1863e1621e6aa15f89a653ec13ca2d9f4cdeddfceddf0853744f0263c8"
+    },
+    {
+      "path": "./xr\u221e_status.md",
+      "sha256": "18f1396094c54923c229e552d12ec99f91f0f96360c931799b7617f25aadf469"
+    },
+    {
+      "path": "./xr\u221e_total_forge.sh",
+      "sha256": "0939f77ed39d4654de8070f4c4807a3a6224a67344df3454dae47ccf12b041b0"
+    },
+    {
+      "path": "./xr\u221e_unifica.sh",
+      "sha256": "4c77df73401ed102ec12363e1077bb31e4733c64b2f0ed9b6644db1003a16c5a"
+    },
+    {
+      "path": "./xr\u221e_universe.sh",
+      "sha256": "556b6cdd520790bca67650ebb9a44a0e13a624dd4e8a657a5cbcce597aeab9a4"
+    },
+    {
+      "path": "./xr_sync_all.sh",
+      "sha256": "e145be2d48a2c78648058906e36ce175465a6fbb1d9c93e33bff423040a0fef9"
+    },
+    {
+      "path": "./services/boinc_bridge.py",
+      "sha256": "c4e85815ef4bc89c023da4fa45791aa615232e32c2614d20564c83619ffdf1a6"
+    },
+    {
+      "path": "./services/seti_ingest.py",
+      "sha256": "132f18acec2a6d2416ca4c4d2378683847a494396ce692f6232d6d137f614a1e"
+    },
+    {
+      "path": "./services/eco_log.py",
+      "sha256": "133cc13c9089d65e5dab331754a6021311954b36f0e5d551a39309542b5c5d2d"
+    },
+    {
+      "path": "./services/xr_miner.py",
+      "sha256": "c6cf667b9e035086fa0f46c855b31808c8b634c15a0a58f9bade56bcf53bffa0"
+    },
+    {
+      "path": "./data/sha_manifest.json",
+      "sha256": "2d43cc82853e954c77d4254585d99dc37f5ddec800b13e12bb5dad5e0aa242d5"
+    },
+    {
+      "path": "./data/eco_events.log",
+      "sha256": "b8478a593692420c8b793450fd01f9cf8e2874693ed6581c42179331ca226a3b"
+    },
+    {
+      "path": "./data/seti_results.json",
+      "sha256": "499e25468d0c41e0c5f10db16aad7a8e6047012786c6ff18c391772f3637894b"
+    },
+    {
+      "path": "./data/boinc_state.json",
+      "sha256": "8cb041cbb8e839342a66cb029f08338ea2049caf78a0f2dca55796b6f7c7454c"
+    },
+    {
+      "path": "./data/xr_miner_state.json",
+      "sha256": "73f1deaf9cdefd97957f30ad9105dbaed16f6b540e2e57900c6d205d0062a548"
+    },
+    {
+      "path": "./docs/index.html",
+      "sha256": "da655cdb150552eecf15b41dc20ae7b9ba472ce854c1819b0b44fab7ce97b539"
+    },
+    {
+      "path": "./docs/pulsar_badge.svg",
+      "sha256": "79fd5f4c57a61dd3d699325682e064ef5ac8c97027fbfdd493c76eebcb66f1ac"
+    },
+    {
+      "path": "./ops/verify_sha.sh",
+      "sha256": "f68dd2da072bde7a32d2f5cea39eb7642cb45ca22d2a7a73a2dd085276d013af"
+    },
+    {
+      "path": "./xr-coin/chain.json",
+      "sha256": "7fb795dee5273592c5f136b07c942164a4821d0e705a4e26ad9ae0a011efcc87"
+    },
+    {
+      "path": "./logs/boinc_bridge.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "./logs/xr_miner.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "./logs/server.log",
+      "sha256": "649784e30bb40dfada26bc83c2fb6999cd7952c4cfd990ab454b2df7854488df"
+    },
+    {
+      "path": "./logs/seti_ingest.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "./logs/eco_events.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "./oauth/app.py",
+      "sha256": "2baefd611d03dc7968e06b3b2ed556c6ccb050ed6936870623ebe5ce6b7660ae"
+    },
+    {
+      "path": "./oauth/requirements.txt",
+      "sha256": "caf5e1b35dce24335b5be40e621b6cf3675ce86d8a4a9e64068a0a2edb163048"
+    },
+    {
+      "path": "./xr_boinc/start_boinc.sh",
+      "sha256": "91e7e263b4ebd83515d90f1a607f5c0554a349e42d5affd52f3626a37621f85b"
+    },
+    {
+      "path": "./xr\u221e_20251106_1227/xr\u221e_astro_bridge.py",
+      "sha256": "2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf"
+    },
+    {
+      "path": "./xr\u221e_20251106_1227/xr\u221e_validator.sh",
+      "sha256": "06805e95eea6849be2a4b9eb357a9010728f4e3088dd5946b5e12bf678bf3e22"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1227/xr\u221e_astro_bridge.py",
+      "sha256": "2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1227/xr\u221e_validator.sh",
+      "sha256": "89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1232/xr\u221e_astro_bridge.py",
+      "sha256": "2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1232/xr\u221e_validator.sh",
+      "sha256": "89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1244/xr\u221e_astro_bridge.py",
+      "sha256": "2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1244/xr\u221e_validator.sh",
+      "sha256": "89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1249/xr\u221e_astro_bridge.py",
+      "sha256": "2a3bfd9453f3693be80d1ac4d614967ffc00a8c63d9ded7ea39bb63b49263abf"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1249/xr\u221e_validator.sh",
+      "sha256": "89a48b15cf36ce53f05aefbc13e1de943baf5fe790d351f4e581779276dfa169"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1252/xr\u221e_astro_bridge.py",
+      "sha256": "d148a1d870af24e7af7bdaa289a70b5d2aec5a8e1758455d70da6336acc21d51"
+    },
+    {
+      "path": "./xr\u221e_moduli_20251106_1252/xr\u221e_validator.sh",
+      "sha256": "c5bb71d74493ebc6fa59ceb2e1000b2af69e5b40caa13ba30d9c4ecd1bafc2bc"
+    }
+  ],
+  "duplicates": [
+    [
+      "./pulsar_badge.svg",
+      "./docs/pulsar_badge.svg"
+    ],
+    [
+      "./logs/boinc_bridge.log",
+      "./logs/xr_miner.log"
+    ],
+    [
+      "./logs/boinc_bridge.log",
+      "./logs/seti_ingest.log"
+    ],
+    [
+      "./logs/boinc_bridge.log",
+      "./logs/eco_events.log"
+    ],
+    [
+      "./xr\u221e_20251106_1227/xr\u221e_astro_bridge.py",
+      "./xr\u221e_moduli_20251106_1227/xr\u221e_astro_bridge.py"
+    ],
+    [
+      "./xr\u221e_20251106_1227/xr\u221e_astro_bridge.py",
+      "./xr\u221e_moduli_20251106_1232/xr\u221e_astro_bridge.py"
+    ],
+    [
+      "./xr\u221e_moduli_20251106_1227/xr\u221e_validator.sh",
+      "./xr\u221e_moduli_20251106_1232/xr\u221e_validator.sh"
+    ],
+    [
+      "./xr\u221e_20251106_1227/xr\u221e_astro_bridge.py",
+      "./xr\u221e_moduli_20251106_1244/xr\u221e_astro_bridge.py"
+    ],
+    [
+      "./xr\u221e_moduli_20251106_1227/xr\u221e_validator.sh",
+      "./xr\u221e_moduli_20251106_1244/xr\u221e_validator.sh"
+    ],
+    [
+      "./xr\u221e_20251106_1227/xr\u221e_astro_bridge.py",
+      "./xr\u221e_moduli_20251106_1249/xr\u221e_astro_bridge.py"
+    ],
+    [
+      "./xr\u221e_moduli_20251106_1227/xr\u221e_validator.sh",
+      "./xr\u221e_moduli_20251106_1249/xr\u221e_validator.sh"
+    ]
+  ]
+}
