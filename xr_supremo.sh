@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# xr_supremo.sh — pulizia, auto-merge, report, dashboard, sync main + gh-pages
+# xr_supremo.sh — reset + merge + report + dashboard + gh-pages
 # Uso: ./xr_supremo.sh <REMOTE_URL> [ours|theirs]
 # Esempio: ./xr_supremo.sh https://github.com/HighKali/xr-infinity.git ours
 
@@ -8,101 +8,55 @@ set -euo pipefail
 REMOTE="${1:-}"
 POLICY="${2:-ours}"   # ours = tieni locale, theirs = tieni remoto
 PAGES_BRANCH="${PAGES_BRANCH:-gh-pages}"
+BACKUP_DIR="${HOME}/xr_backup_$(date +%Y%m%d_%H%M%S)"
 
 if [[ -z "$REMOTE" ]]; then
   echo "❌ Uso: $0 <REMOTE_URL> [ours|theirs]"
   exit 1
 fi
-if [[ "$POLICY" != "ours" && "$POLICY" != "theirs" ]]; then
-  echo "❌ Politica conflitti non valida: $POLICY (usa ours|theirs)"
-  exit 1
-fi
 
-echo "== XR∞ Supremo =="
+echo "== XR∞ Supremo Integrato =="
 echo "Remote: $REMOTE | Policy: $POLICY"
 
-# 0) Base Git setup
-git config pull.rebase false || true
-git config advice.defaultBranchName false || true
-git branch -M main || true
-git remote add origin "$REMOTE" 2>/dev/null || true
+# 1) Backup file non tracciati
+echo "📦 Backup file non tracciati in $BACKUP_DIR"
+mkdir -p "$BACKUP_DIR"
+UNTRACKED=$(git ls-files --others --exclude-standard)
+if [[ -n "$UNTRACKED" ]]; then
+  echo "$UNTRACKED" | while read -r f; do
+    if [[ -f "$f" ]]; then
+      mkdir -p "$BACKUP_DIR/$(dirname "$f")"
+      mv "$f" "$BACKUP_DIR/$(dirname "$f")/"
+      echo "🔒 Spostato $f"
+    fi
+  done
+fi
 
-# 1) Pulizia residui/submodule fantasma (xr-coin~*)
+# 2) Pulizia submodule fantasma
 echo "🧹 Pulizia submodule fantasma…"
 find . -maxdepth 2 -type d -name "xr-coin~*" -print0 | xargs -0 -r rm -rf || true
 git rm -f $(git ls-files -o --exclude-standard | grep -E '^xr-coin~' || true) 2>/dev/null || true
 
-# 2) Stash temporaneo delle modifiche non in merge (per evitare blocchi di checkout)
-echo "📦 Stash temporaneo (non conflitti)…"
-git stash push -u -m "xr_supremo auto-stash" || true
-
-# 3) Fetch + Pull con storie non correlate
+# 3) Fetch + Pull
 echo "🌐 Fetch/Pull main…"
-git fetch origin || true
+git branch -M main || true
+git remote add origin "$REMOTE" 2>/dev/null || true
+git fetch origin
 if ! git pull origin main --allow-unrelated-histories; then
-  echo "⚠️ Conflitti rilevati: applico politica ${POLICY}…"
-  if [[ "$POLICY" == "ours" ]]; then
-    git checkout --ours .
-  else
-    git checkout --theirs .
-  fi
-  # Rimuovi eventuali submodule ghost che bloccano add/commit
-  find . -maxdepth 2 -type d -name "xr-coin~*" -print0 | xargs -0 -r rm -rf || true
+  echo "⚠️ Conflitti: applico politica ${POLICY}…"
+  git checkout --"$POLICY" .
   git add -A
-  git commit -m "XR∞ auto-merge (${POLICY})"
+  git commit -m "XR∞ auto-merge (${POLICY})" || true
 fi
 
-# 4) Applica la politica ai file noti in conflitto (idempotente)
-echo "🧭 Normalizzo conflitti noti (data, services, log)…"
-FILES_CONFLITTO=(
-  "data/eco_events.log"
-  "eco_events.log"
-  "services/boinc_bridge.py"
-  "services/eco_log.py"
-  "services/seti_ingest.py"
-)
-for f in "${FILES_CONFLITTO[@]}"; do
-  if git ls-files --unmerged "$f" >/dev/null 2>&1; then
-    if [[ "$POLICY" == "ours" ]]; then
-      git checkout --ours "$f" || true
-    else
-      git checkout --theirs "$f" || true
-    fi
-    git add "$f" || true
-  fi
-done
+# 4) Reinserimento file dal backup
+echo "📥 Reinserimento file dal backup"
+rsync -a "$BACKUP_DIR/" . || true
+git add -A
+git commit -m "XR∞ reinserimento file locali dopo pull" || true
 
-# 5) Ripristina file cancellati se la policy è "ours"
-echo "🗃️ Ripristino file cancellati (policy ours)…"
-if [[ "$POLICY" == "ours" ]]; then
-  git restore --staged . || true
-  git restore . || true
-fi
-
-# 6) Commit finale risoluzione (se necessario)
-if [[ -n "$(git status --porcelain)" ]]; then
-  git add -A
-  git commit -m "XR∞ risoluzione conflitti finale (${POLICY})"
-fi
-
-# 7) Ripristina stash e committa se riporta modifiche utili
-echo "📦 Ripristino stash (se presente)…"
-if git stash list | grep -q "xr_supremo auto-stash"; then
-  git stash pop || true
-  # Se pop genera conflitti, riapplica la stessa policy
-  if [[ -n "$(git status --porcelain)" ]]; then
-    if [[ "$POLICY" == "ours" ]]; then
-      git checkout --ours .
-    else
-      git checkout --theirs .
-    fi
-    git add -A
-    git commit -m "XR∞ integrazione stash (${POLICY})"
-  fi
-fi
-
-# 8) Genera report integrità
-echo "📊 Genero report (SHA256, duplicati)…"
+# 5) Genera report integrità
+echo "📊 Genero report integrità…"
 mkdir -p data docs
 cat > xr_report.py <<'PY'
 import os, hashlib, json
@@ -136,7 +90,7 @@ print("✅ Report in data/report.json")
 PY
 python3 xr_report.py || true
 
-# 9) Dashboard aggiornata con feed live
+# 6) Aggiorna dashboard
 echo "🖥️ Aggiorno dashboard docs/index.html…"
 cat > docs/index.html <<'HTML'
 <!DOCTYPE html>
@@ -167,14 +121,35 @@ refresh(); setInterval(refresh, 3000);
 </body>
 </html>
 HTML
-
 git add docs/index.html data/report.json
 git commit -m "XR∞ dashboard + report integrità" || true
 
-# 10) Push su main
+# 7) Push main
 echo "📤 Push su origin/main…"
 git push origin main || true
 
-# 11) Pubblicazione gh-pages (crea se manca)
+# 8) Pubblica gh-pages
 echo "🌐 Sincronizzo gh-pages…"
-# Materiale da pubblic
+TMPDIR="$(mktemp -d)"
+rsync -a docs/ "$TMPDIR/"
+if ! git show-ref --verify --quiet "refs/heads/$PAGES_BRANCH"; then
+  if git show-ref --verify --quiet "refs/remotes/origin/$PAGES_BRANCH"; then
+    git checkout -b "$PAGES_BRANCH" "origin/$PAGES_BRANCH"
+  else
+    git checkout --orphan "$PAGES_BRANCH"
+    rm -rf *
+    echo "<!doctype html><title>XR∞ gh-pages</title>" > index.html
+    git add index.html
+    git commit -m "Init gh-pages"
+    git push -u origin "$PAGES_BRANCH"
+  fi
+fi
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD || echo main)"
+git checkout "$PAGES_BRANCH"
+rsync -a --delete "$TMPDIR/" ./
+git add -A
+git commit -m "🔭 XR∞ dashboard update (supremo)" || true
+git push origin "$PAGES_BRANCH" || git push origin "$PAGES_BRANCH" --force
+git checkout main || git checkout "$CURRENT_BRANCH"
+
+echo "✅ Supremo completato: conflitti risolti, file salvati, report generato, dashboard aggiornata, main e gh-pages sincronizzati."
