@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>XR∞ Dashboard Orbitale Unificata 👽</title>
+  <style>
+    body { background:#000; color:#00ff99; font-family:'Courier New',monospace; padding:2rem; }
+    h1 { text-align:center; font-size:2rem; color:#00ffe0; margin-bottom:2rem; }
+    .buttons { text-align:center; margin-bottom:2rem; }
+    button { background:#111; color:#00ff99; border:1px solid #00ff99; padding:0.5rem 1rem; margin:0.2rem; cursor:pointer; }
+    button:hover { background:#00ff99; color:#000; }
+    section { margin-bottom:2rem; border:1px solid #00ff99; padding:1rem; border-radius:6px; background:#111; }
+    h2 { margin-top:0; color:#00ffe0; font-size:1.2rem; }
+    pre { background:#000; padding:1rem; border:1px dashed #00ff99; border-radius:4px; overflow-x:auto; }
+    footer { text-align:center; font-size:0.9rem; color:#888; margin-top:3rem; }
+  </style>
+</head>
+<body>
+  <h1>XR∞ Dashboard Orbitale Unificata 👽</h1>
+  <div class="buttons">
+    <button onclick="pulse()">Pulse</button>
+    <button onclick="observe()">Observe pulsar</button>
+    <button onclick="clearLog()">Clear log</button>
+    <button onclick="badge()">Badge_SVG</button>
+  </div>
+  <section><h2>Log pulsar e astro-eventi</h2><pre id="log">caricamento…</pre></section>
+  <section><h2>Monitor $DSN (Birdeye)</h2><pre id="dsn">caricamento…</pre></section>
+  <section><h2>Badge orbitale</h2><pre id="badge">caricamento…</pre></section>
+  <section><h2>Astrofisica (simulatore locale)</h2><pre>
+Target: PSR B0531+21
+RA: 05h34m31.97s
+DEC: +22°00'52.1"
+Period: 33 ms
+Uso: premi "Observe pulsar" per registrare una nuova osservazione nel log.
+  </pre></section>
+  <footer>XR∞ Constellation — ogni battito è visibile ✦</footer>
+  <script>
+    function pulse() {
+      document.getElementById('log').textContent += "\n" + new Date().toISOString() + " — PULSE — PSR B0531+21";
+    }
+    function observe() {
+      document.getElementById('log').textContent += "\n" + new Date().toISOString() + " — PULSAR OBSERVED — PSR B0531+21 @ 05h34m31.97s +22°00'52.1\" — 33.0ms";
+    }
+    function clearLog() {
+      document.getElementById('log').textContent = "Log azzerato.";
+    }
+    function badge() {
+      document.getElementById('badge').textContent = "XR∞ VALIDATOR\nPULSAR BRIDGE • UFO DASH • DSN LIVE\nServito da Flask : file pulsar_badge.svg";
+    }
+  </script>
+</body>
+</html>
